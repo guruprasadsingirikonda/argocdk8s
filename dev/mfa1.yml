@@ -28,12 +28,10 @@ spec:
           livenessProbe:
             httpGet:
               path: /mfa-service/health/liveness
-              port: 8080
             initialDelaySeconds: 10
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /mfa-service/health/readiness
-              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 10
