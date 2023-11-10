@@ -25,13 +25,3 @@ spec:
             requests:
               cpu: "256m"
               memory: "256Mi"
-          livenessProbe:
-            httpGet:
-              path: /mfa-service/health/liveness
-            initialDelaySeconds: 10
-            periodSeconds: 10
-          readinessProbe:
-            httpGet:
-              path: /mfa-service/health/readiness
-            initialDelaySeconds: 5
-            periodSeconds: 10
