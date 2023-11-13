@@ -29,11 +29,11 @@ spec:
             httpGet:
               path: /mfa-service/health/liveness
               port: 9095
-            initialDelaySeconds: 120
+            initialDelaySeconds: 240
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /mfa-service/health/readiness
               port: 9095
-            initialDelaySeconds: 200
+            initialDelaySeconds: 240
             periodSeconds: 10
