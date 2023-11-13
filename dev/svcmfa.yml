@@ -8,6 +8,6 @@ spec:
     app: mfa-backend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 9095
+      targetPort: 9095
   type: ClusterIP
