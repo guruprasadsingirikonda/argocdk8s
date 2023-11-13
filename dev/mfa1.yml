@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: mfa-backend-container
-          image: guruprasadsingirikonda/mfa:v2
+          image: guruprasadsingirikonda/mfa:v3
           ports:
-            - containerPort: 8080
+            - containerPort: 9095
           resources:
             limits:
               cpu: "512m"
@@ -28,12 +28,12 @@ spec:
           livenessProbe:
             httpGet:
               path: /mfa-service/health/liveness
-              port: 8080
-            initialDelaySeconds: 60
+              port: 9095
+            initialDelaySeconds: 120
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /mfa-service/health/readiness
-              port: 8080
-            initialDelaySeconds: 60
+              port: 9095
+            initialDelaySeconds: 120
             periodSeconds: 10
